@@ -21,7 +21,7 @@ const TaskList = ({
           <div className="flex items-center space-x-2">
             <button
               onClick={() => onToggleCompletion(task.id)}
-              className={`w-6 h-6 flex items-center justify-center font-[#212121] rounded-full border-2  transition duration-200 hover-image ${
+              className={`w-6 h-6 flex items-center justify-center font-[#212121] rounded-full border-2 transition duration-200 hover-image ${
                 task.completed ? "bg-[#212121]" : "bg-[#212121]"
               }`}
             >

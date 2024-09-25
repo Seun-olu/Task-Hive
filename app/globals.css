@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+body {
+  background-color: #212121;
+}
+
+.hover-image {
+  background-color: #212121;
+  background-size: cover;
+  transition: background-image 0.3s ease;
+}
+
+.hover-image:hover {
+  background-image: url("/check.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70% 60%;
+}

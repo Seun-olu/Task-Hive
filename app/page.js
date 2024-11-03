@@ -5,6 +5,7 @@ import TaskForm from "./components/TaskForm";
 // import Navbar from "./components/Navbar";
 import { MenuOpen } from "./assets/icons/MenuOpen";
 import { MenuClose } from "./assets/icons/MenuClose";
+import Navbar from "./components/Navbar";
 
 // import Image from "next/image";
 // import Logo from '../public/taskhive.png'
@@ -116,9 +117,15 @@ const IndexPage = () => {
           </div>
         )}
       </aside>
-      <div className="flex flex-col flex-1 overflow-hidden">
-        <div className="flex flex-col justify-between h-screen">
-          <div className="flex flex-col container mx-auto p-4 overflow-y-auto">
+      
+      <div
+        className={`flex flex-col flex-1 gap-10 overflow-hidden transition-all duration-500 ease-in-out ${
+          menuOpen ? "ml-52" : "ml-16"
+        }`}
+      >
+        <Navbar />
+        <div className="flex flex-col justify-between mt-10 h-auto">
+          <div className="flex flex-col container  mx-auto p-4 overflow-y-auto">
             <TaskList
               tasks={filteredTasks}
               onDelete={deleteTask}
@@ -126,14 +133,19 @@ const IndexPage = () => {
               onToggleFavourite={toggleTaskFavourite}
             />
           </div>
-          <div className="fixed left-[13rem] right-3 w-auto bottom-0 bg-[#212121] text-[#88909F]">
+          <div
+            className={`fixed bottom-0 w-full right-3 bg-[#212121] bg-opacity-70 backdrop-blur-md shadow-lg text-[#88909F] transition-all duration-500 ease-in-out ${
+              menuOpen
+                ? "left-[13rem] w-[calc(100%-13rem-1.5rem)]"
+                : "left-[4rem] w-[calc(100%-4rem-1.5rem)]"
+            }`}
+          >
             <TaskForm onAddTask={addTask} />
           </div>
-        </div>
+        </div>  
       </div>
     </div>
   );
 };
 
 export default IndexPage;
-

@@ -10,21 +10,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        Pacifico:["Pacifico", "cursive"]
+        Jersey:["Jersey 20 Charted", "sans-serif"]
       }
     },
   },
-  // theme: {
-  //   extend: {
-  //     colors: {
-  //       maroon: '#800000',
-  //       gold: '#FFD700',
-  //       teal: '#008080',
-  //       'light-blue': '#ADD8E6',
-  //       'dark-gray': '#333333',
-  //       'light-gray': '#F0F0F0',
-  //     },
-  //   },
-  // },
   plugins: [],
 };

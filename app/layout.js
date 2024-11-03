@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>Task Hive</title>
-        <link rel="shortcut icon" href="/static/Task Hive.png"/>
+        <link rel="icon" href="/static/Favicon.ico" sizes="any"/>
       </head>
       <body className={inter.className}>{children}</body>
     </html>

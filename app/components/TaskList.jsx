@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import Check from "../../public/check.png";
-import Delete from "../../public/Delete.png";
-import Fav from "../../public/Fav.png"; // Unfilled star icon
-import FavFilled from "../../public/FavFilled.png"; // Filled star icon
+import Check from "../assets/image/check.png";
+import Delete from "../assets/image/Delete.png";
+import Fav from "../assets/image/Fav.png"; // Unfilled star icon
+import FavFilled from "../assets/image/FavFilled.png"; // Filled star icon
 
 const TaskList = ({
   tasks,
@@ -12,11 +12,11 @@ const TaskList = ({
   onToggleFavourite,
 }) => {
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 h-full">
       {tasks.map((task) => (
         <div
           key={task.id}
-          className="flex items-center h-12 justify-between bg-[#2f2f2f] shadow-sm rounded-full p-4 mt-[45px]"
+          className="flex items-center h-12 justify-between bg-[#2f2f2f] shadow-sm rounded-xl p-4 mt-[45px]"
         >
           <div className="flex items-center space-x-2">
             <button

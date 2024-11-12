@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import plus from "../assets/image/plus.png"
+import plus from "../assets/image/plus.png";
 
 const TaskForm = ({ onAddTask }) => {
   const [taskTitle, setTaskTitle] = useState("");
@@ -15,20 +15,20 @@ const TaskForm = ({ onAddTask }) => {
   };
 
   return (
-    <form onSubmit={handleAddTask}>
-      <div className=" flex-grow max-w-2xl mx-auto flex items-center my-3 bg-[#2F2F2F] rounded-xl px-[6px] py-[4px] focus:outline-none">
+    <form onSubmit={handleAddTask} className="w-full max-w-2xl mx-auto">
+      <div className="flex items-center bg-[#2F2F2F] rounded-xl p-2">
         <button
           type="submit"
-          className=" text-white p-3 focus:outline-none"
+          className="text-white p-2 focus:outline-none"
         >
-          <Image src={plus} alt="Enter" width={15} height={15} />
+          <Image src={plus} alt="Add Task" width={16} height={16} />
         </button>
         <input
           type="text"
           value={taskTitle}
           onChange={(e) => setTaskTitle(e.target.value)}
           placeholder="Enter task..."
-          className="flex-grow text-white  rounded-md py-2 px-3 bg-transparent focus:outline-none"
+          className="flex-grow text-white bg-transparent py-2 px-3 focus:outline-none placeholder:text-gray-400"
         />
       </div>
     </form>

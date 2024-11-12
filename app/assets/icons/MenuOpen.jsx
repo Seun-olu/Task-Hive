@@ -11,10 +11,10 @@ export const MenuOpen = ({onClick, className}) => {
       viewBox="0 0 24 24"
     >
       <g
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        fill="white"
+        stroke="white"
+        stroke-linecap="white"
+        stroke-linejoin="white"
         stroke-width="2"
       >
         <path stroke-dasharray="16" stroke-dashoffset="16" d="M5 5h14">
